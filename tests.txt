@@ -1,0 +1,11 @@
+Testing methods:
+
+1. Test the maximum connections the server can handle without dropping any packets
+2. Test if the server can accept multiple connections at the same time
+3. Test if HEAD, GET and POST requests can be successfully handled
+
+
+Vulnerabilities:
+
+1. By the Listen(sock, 1000) function, if the size of fd reaches 1000 and a connection request arrives, the client receives an ECONNREFUSED error
+2. Potentially insecurity results from using HTTP instead of HTTPS
